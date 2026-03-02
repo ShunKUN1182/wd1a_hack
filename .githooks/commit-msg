@@ -1,0 +1,13 @@
+#!/bin/sh
+
+commit_regex='^(feat|fix|style|refactor|docs|test|chore): .+'
+
+if ! grep -qE "$commit_regex" "$1"; then
+  echo ""
+  echo "❌ コミットメッセージは以下の形式にしてください:"
+  echo "feat: 新機能"
+  echo "fix: バグ修正"
+  echo "style: 見た目修正"
+  echo ""
+  exit 1
+fi
