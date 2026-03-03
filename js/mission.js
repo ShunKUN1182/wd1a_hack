@@ -100,4 +100,25 @@ function startMissionList() {
     );
 }
 
+function missionChange(e) {}
+
 startMissionList();
+const changeBtn = document.querySelectorAll(".change_btn");
+const missionListBtn = document.querySelectorAll(".mission_list");
+console.log(changeBtn);
+
+missionListBtn.forEach((e) => {
+    e.addEventListener("click", (ele) => {
+        console.log(e, ele);
+        e.classList.add("mission_complete");
+        setTimeout(() => {
+            e.classList.remove("mission_complete");
+        }, 700);
+    });
+});
+
+changeBtn.forEach((e) => {
+    e.addEventListener("click", () => {
+        console.log(e);
+    });
+});
