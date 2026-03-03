@@ -1,0 +1,24 @@
+
+.room_text_wrap{
+    display: flex;
+    align-items: center;
+    margin: 45px auto 40px 30px;
+    gap: 16px;
+    .returm_btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: var(--grayColor);
+        span{
+            margin-left: 5px;
+            font-size: 1.6rem;
+        }
+    }
+    h1{
+        color: var(--whiteColor);
+        font-size: 1.6rem;
+    }
+}
