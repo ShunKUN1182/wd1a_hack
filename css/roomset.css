@@ -22,3 +22,38 @@
         font-size: 1.6rem;
     }
 }
+
+.room_id_box{
+    background-color: var(--textboxColor);
+    border-radius: 8px;
+    margin: auto 30px;
+    padding: 20px;
+    .room_id_wrap{
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+        .room_id_text{
+            display: flex;
+            justify-content: space-between;
+            color: var(--whiteColor);
+            h2{
+                font-size: 1.6rem;
+            }
+        }
+        input[type=text]{
+            width: 50px;
+            height: 70px;
+            background-color: var(--grayColor);
+            border-radius: 8px;
+            font-size: 4rem;
+            text-align: center;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        }
+        .id_number_wrap{
+            display: flex;
+            gap: 8px;
+        }
+    }
+}
