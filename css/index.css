@@ -54,13 +54,67 @@
 
 .modal {
     position: fixed;
-    top: 0;
+    top: 14%;
     width: 100vw;
     height: 100vh;
-    /* background: tomato; */
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
     .modal_bg {
-        /* margin: auto; */
+        margin: 0 auto;
         background-color: var(--textboxColor);
-        height: 600px;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 16px;
+        p {
+            background-color: tomato;
+            width: 50%;
+            margin: 50px auto 0;
+        }
+        input {
+            background-color: var(--grayColor);
+            border-radius: 16px;
+            height: 40px;
+            margin: 50px 20px 0;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .btns {
+            margin-top: 75px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                background-color: var(--modeBtnColor);
+                color: var(--blockColor);
+                font-size: 2.4rem;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 2rem;
+                transition: 0.3s;
+                &:hover {
+                    background-color: var(--whiteColor);
+                }
+            }
+        }
+        .back_btn {
+            margin-top: 40px;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--whiteColor);
+                font-size: 2.4rem;
+                font-weight: bold;
+            }
+        }
     }
 }
