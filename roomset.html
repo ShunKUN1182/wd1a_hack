@@ -12,8 +12,12 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/roomset.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script defer src="roomset.js"></script>
     </head>
     <body>
+        <div class="overlay">
+            <div class="stamp_text">ゲーム開始</div>
+        </div>
         <header>
             <div class="room_text_wrap">
                 <div class="returm_btn">
@@ -34,10 +38,10 @@
                         </span>
                     </div>
                     <div class="id_number_wrap">
-                        <input type="text" maxlength="1">
-                        <input type="text" maxlength="1">
-                        <input type="text" maxlength="1">
-                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1" value="6" readonly>
+                        <input type="text" maxlength="1" value="8" readonly>
+                        <input type="text" maxlength="1" value="0" readonly>
+                        <input type="text" maxlength="1" value="9" readonly>
                     </div>
                 </div>
             </div>
@@ -71,9 +75,17 @@
             </div>
             <div class="people_box">
                 <div class="people_wrap">
-                    <div class="icon_wrap"></div>
-                    <h3><span>0</span>人参加中</h3>
+                    <div class="icon_wrap">
+                        <p class="icon_img"><img src="" alt=""></p>
+                        <p class="icon_img"><img src="" alt=""></p>
+                        <p class="icon_img"><img src="" alt=""></p>
+                        <p class="icon_img"><img src="" alt=""></p>
+                    </div>
+                    <h3><span>4</span>人参加中</h3>
                 </div>
+            </div>
+            <div class="start_btn start_trigger">
+                <a href="mission.html">ゲーム開始</a>
             </div>
         </main>
     </body>
