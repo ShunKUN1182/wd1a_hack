@@ -1,0 +1,14 @@
+h1 {
+    color: var(--goodColor);
+    padding: 10px 40px;
+    border-radius: 16px;
+    border: solid 3px var(--goodColor);
+    margin: 30px;
+    width: 140px;
+    text-align: center;
+}
+
+.runking_box {
+    .silver_box {
+    }
+}
