@@ -4,6 +4,8 @@ const returnBtn = document.querySelector(".room_text_wrap");
 const body = document.body;
 const inputText = document.querySelectorAll(`input[type="text"]`);
 const inputRadio = document.querySelectorAll(`input[type="radio"]`);
+const sound = new Audio("../sound/Stamp_se.mp3");
+const sound2 = new Audio("../sound/click_btn.mp3");
 
 startBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -21,6 +23,8 @@ startBtn.addEventListener("click", (e) => {
         }
     });
 
+    sound.play();
+
     setTimeout(() => {
         window.location.href = "mission.html";
     }, 2000);
@@ -36,4 +40,11 @@ inputText.forEach((e) => {
         randomNums.push(Math.floor(Math.random() * 10));
         e.value = randomNums[i];
     }
+});
+
+inputRadio.forEach((e) => {
+    e.addEventListener("click", () => {
+        sound2.currentTime = 0;
+        sound2.play();
+    });
 });
