@@ -3,10 +3,80 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 180px;
-    h1 {
-        text-align: center;
-        font-size: 25px;
+    
+}
+.spotlight_wrap{
+        margin-top: 160px;
         color: var(--whiteColor);
+        position: relative;
+        width: 300px;
+        height: 140px;
+        margin: 20px auto;
+        .logo_white{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        .spotlight{
+            position: absolute;
+            border-radius: 50%;
+            background-color: var(--mainColor);
+            width: 280px;
+            height: 280px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 2;
+            opacity: 0;
+            }
+        .logo_black{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3;
+            opacity: 0;
+        }
+    }
+
+.spotlight_wrap .spotlight,
+.spotlight_wrap .logo_black{
+    animation: spot 4s forwards;
+}
+
+@keyframes spot{
+    0%,25%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+
+    30%,37%{
+        opacity: 1;
+    }
+    32%,40%{
+        opacity: 0;
+    }
+
+    50%,60%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+
+    70%,74%{
+        opacity: 1;
+    }
+    72%,76%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
     }
 }
 
