@@ -131,6 +131,7 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.85);
     display: none;
+    z-index: 100;
     .modal_bg {
         margin: 0 auto;
         background-color: var(--textboxColor);
