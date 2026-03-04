@@ -119,6 +119,7 @@ console.log(changeBtn);
 
 maxScoreInput.textContent = maxScore;
 
+
 missionListBtn.forEach((e) => {
     let count = 0;
     e.addEventListener("click", (ele) => {
@@ -133,7 +134,15 @@ missionListBtn.forEach((e) => {
         console.log(pointCounter);
         myPoint.textContent = pointCounter;
         if (pointCounter >= maxScore) {
-            alert("ゲーム終了だよ！");
+            // alert("ゲーム終了だよ！");
+            const overlay =document.querySelector(".overlay");
+            const body = document.body;
+            overlay.classList.add("active");
+
+            setTimeout(()=>{
+            window.location.href = "index.html";
+            } ,2000);
+            
         }
         e.classList.add("mission_complete");
         setTimeout(() => {
