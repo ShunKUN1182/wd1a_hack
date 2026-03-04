@@ -1,6 +1,6 @@
 const startBtn = document.querySelector(".start_trigger");
 const overlay = document.querySelector(".overlay");
-const returnBtn = document.querySelector(".returm_btn");
+const returnBtn = document.querySelector(".room_text_wrap");
 const body = document.body;
 
 startBtn.addEventListener("click" ,(e)=>{

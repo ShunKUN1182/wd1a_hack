@@ -4,6 +4,7 @@
     align-items: center;
     margin: 30px auto 32px 30px;
     gap: 16px;
+    cursor: pointer;
     .returm_btn{
         display: flex;
         align-items: center;
@@ -66,6 +67,7 @@
     background-color: var(--bgColor);
     color: var(--grayColor);
     transition: 0.2s;
+    cursor: pointer;
     h3{
         font-size: 1.4rem;
         letter-spacing: 0.2rem;
