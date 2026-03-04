@@ -113,16 +113,21 @@ const changeBtn = document.querySelectorAll(".change_btn");
 const missionListBtn = document.querySelectorAll(".mission_list");
 const myPoint = document.querySelector("#myPoint");
 const maxScoreInput = document.querySelector("#maxScoreInput");
-const maxScore = 20;
+const inputCodeName = document.querySelector("#inputCodeName");
+const charaImg = document.querySelector(".character_img");
+const maxScore = localStorage.getItem("maxScore");
 let pointCounter = 0;
 console.log(changeBtn);
 
 maxScoreInput.textContent = maxScore;
-
+inputCodeName.textContent = localStorage.getItem("codeName");
+charaImg.innerHTML = `
+    <img src="${localStorage.getItem("imgPass")}" alt="" />
+`;
 
 missionListBtn.forEach((e) => {
     let count = 0;
-    e.addEventListener("click", (ele) => {
+    e.addEventListener("click", () => {
         if (count == 1) {
             return;
         }
@@ -134,15 +139,12 @@ missionListBtn.forEach((e) => {
         console.log(pointCounter);
         myPoint.textContent = pointCounter;
         if (pointCounter >= maxScore) {
-            // alert("ゲーム終了だよ！");
-            const overlay =document.querySelector(".overlay");
-            const body = document.body;
+            const overlay = document.querySelector(".overlay");
             overlay.classList.add("active");
 
-            setTimeout(()=>{
-            window.location.href = "index.html";
-            } ,2000);
-            
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 2000);
         }
         e.classList.add("mission_complete");
         setTimeout(() => {
