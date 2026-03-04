@@ -76,6 +76,15 @@
             gap: 24px;
         }
         input {
+            background-color: var(--grayColor);
+            border-radius: 16px;
+            height: 40px;
+            margin: 35px 20px 0;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        input[type="radio"] {
             display: none;
         }
         label {
