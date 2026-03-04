@@ -13,7 +13,7 @@ h1 {
     justify-content: center;
     align-items: flex-end;
     gap: 8px;
-    margin-bottom: 64px;
+    margin-bottom: 40px;
     .silver_box {
         h2 {
             color: #c6c9db;
@@ -66,21 +66,121 @@ h1 {
 
 .ranking_wrap {
     margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     .ranking_result {
         display: flex;
+        justify-content: space-between;
         background-color: var(--grayColor);
         border-radius: 8px;
-        border: 3px solid #f5cf48;
-        padding: 12px;
-        h2 {
-            font-size: 1.6rem;
+        padding: 12px 20px;
+        &:nth-child(1) {
+            border: 3px solid #f5cf48;
         }
-        h4 {
-            font-size: 1.4rem;
+        .ranking_text {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            h2 {
+                font-size: 1.6rem;
+                &::first-letter {
+                    font-size: 2rem;
+                }
+            }
+            h3 {
+                font-size: 1.6rem;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+            }
         }
-        img {
-            width: 32px;
-            height: 32px;
+        .data_wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            h4 {
+                font-size: 2rem;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+
+.btns {
+    .btn {
+        margin: 40px 30px 24px;
+        background-color: var(--modeBtnColor);
+        height: 60px;
+        border-radius: 8px;
+        a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--blockColor);
+            text-decoration: none;
+            font-size: 2.4rem;
+        }
+    }
+    p {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 32px;
+        a {
+            font-size: 1.8rem;
+            color: var(--whiteColor);
+        }
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 100px;
+    display: none;
+    .mission {
+        margin: 0 30px 0;
+        .mission_text {
+            h2 {
+                text-align: center;
+                font-size: 3.2rem;
+                color: var(--goodColor);
+            }
+        }
+        .mission_list_wrapper {
+            list-style-type: none;
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .mission_list_wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 8px;
+                .mission_list {
+                    background-color: var(--mainColor);
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                    width: 100%;
+                    padding: 20px;
+                    transition: 0.2s;
+                    p {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
 }
