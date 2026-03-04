@@ -170,6 +170,7 @@ const maxScoreInput = document.querySelector("#maxScoreInput");
 const inputCodeName = document.querySelector("#inputCodeName");
 const charaImg = document.querySelector(".character_img");
 const maxScore = localStorage.getItem("maxScore");
+const sound = new Audio("../sound/Stamp_se.mp3");
 let pointCounter = 0;
 console.log(changeBtn);
 
@@ -198,7 +199,7 @@ missionListBtn.forEach((e) => {
         if (pointCounter >= maxScore) {
             const overlay = document.querySelector(".overlay");
             overlay.classList.add("active");
-
+            sound.play();
             setTimeout(() => {
                 window.location.href = "result.html";
             }, 2000);
